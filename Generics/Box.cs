@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    class Box<T> : IBox<T>
+    public class Box<T> : ICountable<Box<T>> where T : IBox
     {
-        private int count;
+        //private int count;
         private List<T> items;
 
-        public int Count { get { return count; } }
+        public int Count { get { return items.Count; } }
 
         public void Add(T Item)
         {
             items.Add(Item);
-            count++;
+            //count++;
         }
     }
 }

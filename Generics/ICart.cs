@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace Generics
 {
     public interface ICart<T> : ICountable<T>
-        {
+    {
         void Add(T IBox);
-        }
     }
 }

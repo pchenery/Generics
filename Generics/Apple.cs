@@ -11,7 +11,7 @@ namespace Generics
     {
         private int count = 1;
 
-        int Count()
+        public int Count()
         {
             return count;
         }
