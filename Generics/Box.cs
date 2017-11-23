@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    public class Box<T> : ICountable<Box<T>> where T : IBox
+    public class Box<T> : ICountable<Box<T>> where T : IBox<T>
     {
         //private int count;
         private List<T> items;

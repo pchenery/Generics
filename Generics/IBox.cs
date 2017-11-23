@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    public interface IBox : ICountable<T>
+    public interface IBox<T> : ICountable<T>
     {
         void Add(T item);
     }

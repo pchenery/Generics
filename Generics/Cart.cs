@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    public class Cart<Box> : ICart<Box>
+    public class Cart<IBox> : ICart<IBox>
     {
         private int count;
-        private List<Box> boxes;
+        private List<IBox> boxes;
 
         public int Count { get { return count; } }
-        public void Add(Box box)
+        public void Add(IBox box)
         {
             boxes.Add(box);
             count++;
