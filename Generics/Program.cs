@@ -11,7 +11,8 @@ namespace Generics
         static void Main(string[] args)
         {
             Apple apples = new Apple();
-            Console.WriteLine(apples.Count);
+            Console.WriteLine("Apple Count {0}", apples.Count);
+
             Console.ReadLine();
         }
     }
