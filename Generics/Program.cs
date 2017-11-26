@@ -10,6 +10,9 @@ namespace Generics
     {
         static void Main(string[] args)
         {
+            Apple apples = new Apple();
+            Console.WriteLine(apples.Count);
+            Console.ReadLine();
         }
     }
 }

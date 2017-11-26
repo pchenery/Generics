@@ -7,15 +7,12 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    public abstract class Counter : ICountable<T>
+    public abstract class Counter<T>
     {
         int count;
 
-        void Add(T item);
-
-        public int Count()
+        void Add(T item)
         {
-            return count;
         }
     }
 }

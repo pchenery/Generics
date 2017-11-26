@@ -1,4 +1,4 @@
-﻿//using System;
+﻿using System;
 //using System.Collections.Generic;
 //using System.Linq;
 //using System.Text;
@@ -6,7 +6,7 @@
 
 //namespace Generics
 //{
-//    public interface IBox<T> : ICountable<T>
+//    public interface IApple<T> : ICountable<T>
 //    {
 //        void Add(T item);
 //    }
