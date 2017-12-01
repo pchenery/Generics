@@ -7,11 +7,9 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    public class Apple : ICountable<T>
-    {
-        private int count = 1;
-        
-        public int Count { get { return count; } }
+    public class Apple : ICountable
+    {       
+        public int Count {get { return 1; } }
 
         public void Add(T app)
         {

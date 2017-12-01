@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    public class Box<T> : ICountable<Box<T>> where T : Box<T>
+    public class Box : ICountable
     {
         //private int count;
-        private List<T> items;
+        private List<T> items = new List<T>();
 
         public int Count { get { return items.Count; } }
 

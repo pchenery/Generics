@@ -7,14 +7,14 @@
 
 //namespace Generics
 //{
-//    public class Cart<IBox> : ICart<IBox>
+//    public class Cart : ICountable
 //    {
 //       // private int count;
-//        private List<IBox> boxes;
+//        private List<Box> boxes;
 
 //        public int Count { get { return boxes.Count; } }
 
-//        public void Add(IBox box)
+//        public void Add(Box box)
 //        {
 //            boxes.Add(box);
 //            //count++;

@@ -1,6 +1,6 @@
 ﻿namespace Generics
 {
-    public interface ICountable<T>
+    public interface ICountable
     {
         int Count { get; }
     }

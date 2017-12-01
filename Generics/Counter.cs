@@ -7,9 +7,11 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    public abstract class Counter<T>
+    public class Counter<T>
     {
-        int count;
+        private int count;
+
+        int Count { get { return count; } set { count = value; } }
 
         void Add(T item)
         {
