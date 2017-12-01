@@ -8,7 +8,6 @@ namespace Generics
 {
     public class Box : ICountable
     {
-        //private int count;
         private List<T> items = new List<T>();
 
         public int Count { get { return items.Count; } }
@@ -16,7 +15,6 @@ namespace Generics
         public void Add(T Item)
         {
             items.Add(Item);
-            //count++;
         }
     }
 }
