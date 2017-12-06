@@ -8,11 +8,14 @@ using System.Threading.Tasks;
 namespace Generics
 {
     public class Apple : ICountable
-    {       
+    {
+        public colour color;
+
         public int Count {get { return 1; } }
 
         public void Add(T app)
         {
         }
     }
+    public enum colour { red, green };
 }

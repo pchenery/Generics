@@ -16,5 +16,8 @@ namespace Generics
         void Add(T item)
         {
         }
+
+        public delegate int Counts(bool ToCount);
+
     }
 }

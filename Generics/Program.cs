@@ -11,7 +11,9 @@ namespace Generics
         static void Main(string[] args)
         {
             Apple apple = new Apple();
+            apple.color = colour.green;
             Console.WriteLine("Apple Count {0}", apple.Count);
+            Console.WriteLine("Apple Count {0}", CountAllApples(apple));
 
             Box box1 = new Box();
             T t1 = new T();
@@ -35,6 +37,16 @@ namespace Generics
 
             Console.WriteLine("Cart contains {0} items", cart.Count);
             Console.ReadLine();
+        }
+
+        static int CountAllApples(Apple apple)
+        {
+            return apple.Count;
+        }
+
+        static int CountRedApples(Apple apple)
+        {
+            return apple.Count;
         }
     }
 }
