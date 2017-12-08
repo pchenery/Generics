@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Generics;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,10 +11,22 @@ namespace Generics
     {
         static void Main(string[] args)
         {
-            Apple apple = new Apple();
-            apple.color = colour.green;
-            Console.WriteLine("Apple Count {0}", apple.Count);
-            Console.WriteLine("Apple Count {0}", CountAllApples(apple));
+            Apple apple1 = new Apple(Colour.green);
+            Apple apple2 = new Apple(Colour.red);
+            Apple apple3 = new Apple(Colour.green);
+
+            var AppleCounter = new Counter<Apple>();
+            var appleCounter = new Counter<Apple>(a => a.color.Equals(Colour.red));
+
+            AppleCounter.Add(apple1);
+            AppleCounter.Add(apple2);
+            AppleCounter.Add(apple3);
+
+            AppleCounter.Count();
+                
+
+            Console.WriteLine("Apple Count {0}", AppleCounter.Count());
+            //Console.WriteLine("Apple Count {0}", CountAllApples(apple2));
 
             Box box1 = new Box();
             T t1 = new T();

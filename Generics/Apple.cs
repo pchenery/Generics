@@ -7,15 +7,21 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    public class Apple : ICountable
+    public class Apple :ICountable
     {
-        public colour color;
+        private List<T> items = new List<T>();
 
-        public int Count {get { return 1; } }
+        public Colour color;
+        public Apple(Colour colour)
+        {
+            color = colour;
+        }
+
+        public int Count {get { return items.Count; } }
 
         public void Add(T app)
         {
         }
     }
-    public enum colour { red, green };
+    public enum Colour { red, green };
 }

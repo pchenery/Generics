@@ -9,15 +9,26 @@ namespace Generics
 {
     public class Counter<T>
     {
-        private int count;
+        private List<T> items = new List<T>();
+        private Func<T, bool> IsCountable = a => true;
 
-        int Count { get { return count; } set { count = value; } }
-
-        void Add(T item)
+        public int Count()
         {
+            return items.Where(IsCountable).Count();
         }
 
-        public delegate int Counts(bool ToCount);
+        public void Add(T item)
+        {
+            items.Add(item);
+        }
 
+        public Counter(Func<T, bool> ToCount)
+        {
+            IsCountable = ToCount;
+        }
+
+        public Counter()
+        {
+        }
     }
 }
