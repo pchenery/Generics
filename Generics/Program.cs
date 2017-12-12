@@ -16,17 +16,18 @@ namespace Generics
             Apple apple3 = new Apple(Colour.green);
 
             var AppleCounter = new Counter<Apple>();
-            var appleCounter = new Counter<Apple>(a => a.color.Equals(Colour.red));
+            var RedAppleCounter = new Counter<Apple>(a => a.color.Equals(Colour.red));
 
             AppleCounter.Add(apple1);
             AppleCounter.Add(apple2);
             AppleCounter.Add(apple3);
-
-            AppleCounter.Count();
-                
+           
+            RedAppleCounter.Add(apple1);
+            RedAppleCounter.Add(apple2);
+            RedAppleCounter.Add(apple3);            
 
             Console.WriteLine("Apple Count {0}", AppleCounter.Count());
-            //Console.WriteLine("Apple Count {0}", CountAllApples(apple2));
+            Console.WriteLine("Red Apple Count {0}", RedAppleCounter.Count());
 
             Box box1 = new Box();
             T t1 = new T();
@@ -50,16 +51,6 @@ namespace Generics
 
             Console.WriteLine("Cart contains {0} items", cart.Count);
             Console.ReadLine();
-        }
-
-        static int CountAllApples(Apple apple)
-        {
-            return apple.Count;
-        }
-
-        static int CountRedApples(Apple apple)
-        {
-            return apple.Count;
         }
     }
 }
