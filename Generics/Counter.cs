@@ -10,7 +10,7 @@ namespace Generics
     public class Counter<T>
     {
         private List<T> items = new List<T>();
-        private Func<T, bool> IsCountable = a => true;
+        private readonly Func<T, bool> IsCountable = a => true;
 
         public int Count()
         {
@@ -22,9 +22,9 @@ namespace Generics
             items.Add(item);
         }
 
-        public Counter(Func<T, bool> ToCount)
+        public Counter(Func<T, bool> toCount)
         {
-            IsCountable = ToCount;
+            IsCountable = toCount;
         }
 
         public Counter()

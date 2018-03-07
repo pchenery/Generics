@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    public class Apple :ICountable
+    public class Apple : ICountable
     {
         private List<T> items = new List<T>();
 
-        public Colour color;
+        public Colour Colour;
         public Apple(Colour colour)
         {
-            color = colour;
+            Colour = colour;
         }
 
         public int Count {get { return items.Count; } }
@@ -23,5 +23,5 @@ namespace Generics
         {
         }
     }
-    public enum Colour { red, green };
+    public enum Colour { Red, Green };
 }

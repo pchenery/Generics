@@ -10,11 +10,14 @@ namespace Generics
     {
         private List<T> items = new List<T>();
 
-        public int Count { get { return items.Count; } }
-
-        public void Add(T Item)
+        public int Count
         {
-            items.Add(Item);
+            get { return items.Count;}
+        }
+
+        public void Add(T item)
+        {
+            items.Add(item);
         }
     }
 }

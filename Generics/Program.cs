@@ -11,23 +11,23 @@ namespace Generics
     {
         static void Main(string[] args)
         {
-            Apple apple1 = new Apple(Colour.green);
-            Apple apple2 = new Apple(Colour.red);
-            Apple apple3 = new Apple(Colour.green);
+            Apple apple1 = new Apple(Colour.Green);
+            Apple apple2 = new Apple(Colour.Red);
+            Apple apple3 = new Apple(Colour.Green);
 
-            var AppleCounter = new Counter<Apple>();
-            var RedAppleCounter = new Counter<Apple>(a => a.color.Equals(Colour.red));
+            var appleCounter = new Counter<Apple>();
+            var redAppleCounter = new Counter<Apple>(a => a.Colour.Equals(Colour.Red));
 
-            AppleCounter.Add(apple1);
-            AppleCounter.Add(apple2);
-            AppleCounter.Add(apple3);
+            appleCounter.Add(apple1);
+            appleCounter.Add(apple2);
+            appleCounter.Add(apple3);
            
-            RedAppleCounter.Add(apple1);
-            RedAppleCounter.Add(apple2);
-            RedAppleCounter.Add(apple3);            
+            redAppleCounter.Add(apple1);
+            redAppleCounter.Add(apple2);
+            redAppleCounter.Add(apple3);            
 
-            Console.WriteLine("Apple Count {0}", AppleCounter.Count());
-            Console.WriteLine("Red Apple Count {0}", RedAppleCounter.Count());
+            Console.WriteLine("Apple Count {0}", appleCounter.Count());
+            Console.WriteLine("Red Apple Count {0}", redAppleCounter.Count());
 
             Box box1 = new Box();
             T t1 = new T();

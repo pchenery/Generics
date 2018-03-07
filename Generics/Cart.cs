@@ -9,7 +9,7 @@ namespace Generics
 {
     public class Cart : ICountable
     {
-        private List<Box> boxes = new List<Box>();
+        private readonly List<Box> boxes = new List<Box>();
 
         public int Count { get { return boxes.Sum(x => x.Count); } }
 
